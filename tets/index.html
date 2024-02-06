@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div>
+    
+        <div id="outer-box">
+            <div id="inner-box">
+                <h1 id="legend-id"><b><i>Enter your details</i></b></h1>
+                <form id="registerForm" onsubmit="return false;">
+                    <fieldset>
+                        
+                        <label for="firstName" id="label-id">First Name :</label>
+                        <input type="text" placeholder="Enter your firstName " name="firstName" id="firstName"
+                            class="input-id" onkeyup="validationName()">
+                        <span id="nameError"></span>
+                        <br>
+
+
+                        <label for="lastName" id="label-id">Last Name :</label>
+                        <input type="text" placeholder="Enter your Last name " id="lastName" class="input-id"
+                            onkeyup="lastvalidationName()">
+                        <span id="last-name-error"></span><br>
+
+
+
+                        <label for="emailName" id="label-id"> Email :</label>
+                        <input type="email" placeholder="Enter your Email name " id="email" class="input-id"
+                            onkeyup="emailValidation()">
+                        <span id="Email-error"></span><br>
+
+
+
+                        <label for="phonenumber" id="label-id">Phone Number :</label>
+                        <input type="tel" placeholder="Enter your phone Number  " id="phoneNumber" class="input-id"
+                            onkeyup="phonevalidation()" />
+                        <span id="phone-error"></span><br>
+
+
+                        <label for="userID" id="label-id"> User Id :</label>
+                        <input type="text" placeholder="Enter your user id " id="userId" class="input-id"
+                            onkeyup="useridvalidation()">
+                        <span id="user-error"></span><br>
+
+
+                        <label for="password" id="label-id"> Password :</label>
+                        <input type="password" placeholder="Enter your password" name="psw" id="password"
+                            class="input-id" onkeyup="passwordvalidation()">
+                        <span id="Password-error"></span><br>
+
+
+                        <label for="gender" id="label-id"> Gender :</label>
+                        <input type="radio" name="gender" id="male" value="male">
+                        <label>Male</label>
+                        <input type="radio" name="gender" id="female" value="female">
+                        <label>Female</label><br>
+                        <span id="Gender-error"></span><br>
+
+
+                        <button id="submit-button" type="submit" onclick="return validationForm()">submit</button>
+                        <button id="reset-button" type="reset">reset</button><br>
+                        <span id="submiteError"></span>
+
+                    </fieldset>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
